@@ -5,7 +5,7 @@
   <search-input />
   <div class="container">
     <city-weather :currentWeather="getCurrentWeather" />
-    <history-list />
+    <history-list v-if="getCurrentWeather" />
   </div>
   <temp-chart
     v-if="getCurrentWeather?.coord"
