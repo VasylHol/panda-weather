@@ -1,21 +1,23 @@
 <template>
-  <div style="display: flex; margin-bottom: 24px;">
-    <div class="autocomplete-wrapper">
-      <input
-        type="text"
-        v-model="search"
-        @input="searchByCity"
-        class="search"
-        placeholder="Search for location"
-      />
-      <ul class="autocomplete-list">
-        <li v-for="searchEl in serchCityList" :key="searchEl.lat" @click="setCity(searchEl)">
-          {{ searchEl.name }}
-        </li>
-      </ul>
-    </div>
+  <div class="autocomplete-wrapper">
+    <input
+      type="text"
+      v-model="search"
+      @input="searchByCity"
+      class="search"
+      placeholder="Search for location"
+    />
+    <ul class="autocomplete-list">
+      <li
+        v-for="searchEl in serchCityList"
+        :key="searchEl.lat"
+        @click="setCity(searchEl)"
+      >
+        {{ searchEl.name }}
+      </li>
+    </ul>
 
-    <button @click="setCity">search</button>
+    <!-- <button @click="setCity">search</button> -->
   </div>
 </template>
 
@@ -55,7 +57,8 @@ export default defineComponent({
 .search {
   border: unset;
   background: #e9e9e9;
-  padding: 0.5em;
+  height: 40px;
+  width: 99%;
 }
 .search:focus {
   outline: none;
@@ -72,9 +75,10 @@ button {
   padding: unset;
   margin: unset;
   text-align: left;
-  position: absolute;
   z-index: 1;
   width: 100%;
+  position: absolute;
+  top: 42px;
 }
 .autocomplete-list li {
   cursor: pointer;
@@ -85,8 +89,15 @@ button {
   color: #000;
 }
 
+.autocomplete-list li:hover {
+  background-color: #222831;
+  color: white;
+}
+
 .autocomplete-wrapper {
-  display: inline-block;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>

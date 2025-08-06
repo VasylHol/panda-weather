@@ -10,7 +10,7 @@ html {
 }
 body {
   margin: 0;
-  background: linear-gradient(90deg, #2f4573 0%, #1f4c83 50%, #2f4573 100%);
+  background-color: #343d4b;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -21,7 +21,7 @@ body {
   padding: 0 15px; /* Відступи з боків */
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -53,4 +53,7 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
+
+
+
 </style>
